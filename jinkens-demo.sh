@@ -21,7 +21,7 @@ JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 RUNNING_USER=matthew
 
 #Java程序所在的目录（classes的上一级目录）
-APP_HOME=./target/jinkens-demo-1.0-SNAPSHOT
+APP_HOME=./target/netty-demo-1.0-SNAPSHOT
 
 #需要启动的Java主程序（main方法类）
 APP_MAINCLASS=com.zr.NettyServer
