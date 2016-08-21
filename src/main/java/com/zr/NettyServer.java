@@ -7,6 +7,7 @@ import org.jboss.netty.handler.codec.string.StringDecoder;
 import org.jboss.netty.handler.codec.string.StringEncoder;
 
 import java.net.InetSocketAddress;
+import java.util.Date;
 import java.util.concurrent.Executors;
 
 /**
@@ -25,8 +26,9 @@ public class NettyServer {
         });
 
         // Bind and start to accept incoming connections.
-        Channel bind = bootstrap.bind(new InetSocketAddress(8000));
-        System.out.println("Server已经启动，监听端口: " + bind.getLocalAddress() + "， 等待客户端注册。。。");
+        Channel bind = bootstrap.bind(new InetSocketAddress("127.0.0.1", 8000));
+        Date date = new Date();
+        System.out.println(date + " : Server已经启动，监听端口: " + bind.getLocalAddress() + "， 等待客户端注册。。。");
     }
 
     private static class ServerHandler extends SimpleChannelHandler {
