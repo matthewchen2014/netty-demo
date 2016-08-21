@@ -9,7 +9,7 @@ done
 case "$1" in
 
   start)
-    nohup java -Xms128m -Xmx128m -cp $CLASSPATH com.zr.NettyServer > server.log 2>&1 &
+    nohup java -Xms128m -Xmx128m -cp $CLASSPATH com.zr.NettyServer >> server.log 2>&1 &
     echo $! > server.pid
     echo "start java application with pid `cat server.pid`"
     ;;
